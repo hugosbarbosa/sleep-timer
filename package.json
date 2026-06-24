@@ -1,0 +1,27 @@
+{
+  "name": "sleep-timer",
+  "version": "1.0.0",
+  "description": "Sleep Timer - Desligue seu PC com estilo",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win portable"
+  },
+  "build": {
+    "appId": "com.sleeptimer.app",
+    "productName": "Sleep Timer",
+    "win": {
+      "target": [{ "target": "portable", "arch": ["x64"] }],
+      "icon": "icon.ico",
+      "signAndEditExecutable": false,
+      "sign": null
+    },
+    "portable": {
+      "artifactName": "SleepTimer.exe"
+    }
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.1.8"
+  }
+}
